@@ -1,0 +1,47 @@
+﻿@model ZipCodeViewModel
+
+<div class="row">
+    <div class="col">
+        <form method="post" asp-antiforgery="true">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="ZipCode">5-digit US ZIP code:</label>
+                <input type="text" class="form-control" asp-for="ZipCode" pattern="[0-9]{5}" maxlength="5" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="col">
+        @if (Model.GeographicData != null)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="font-weight-bold">Results for @Model.GeographicData.ZipCode:</h3>
+                    <h4 class="text-warning font-weight-bold">@Model.GeographicData.City, @Model.GeographicData.StateName</h4>
+                    <p>
+                        Longitude: @Model.GeographicData.Longitude<br />
+                        Latitude: @Model.GeographicData.Latitude
+                    </p>
+                </div>
+            </div>
+            @Html.ActionLink("Add", "AddZipCode", "Home", null, new { @class = "btn btn-primary", role = "button" })
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <ol>
+            @foreach (var entry in Model.PreviousZipCodeEntries)
+            {
+                <li>
+                    @entry.ZipCode
+                    <span class="font-weight-lighter">(@entry.City, @entry.StateName)</span>
+                </li>
+            }
+        </ol>
+    </div>
+</div>

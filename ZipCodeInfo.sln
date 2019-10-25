@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipCodeInfo", "ZipCodeInfo\ZipCodeInfo.csproj", "{582DD3DB-E11E-481D-9FC5-5C962FEC03C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{582DD3DB-E11E-481D-9FC5-5C962FEC03C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582DD3DB-E11E-481D-9FC5-5C962FEC03C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582DD3DB-E11E-481D-9FC5-5C962FEC03C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582DD3DB-E11E-481D-9FC5-5C962FEC03C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44602FA4-A005-48EF-AB63-F41C367D78DA}
+	EndGlobalSection
+EndGlobal
